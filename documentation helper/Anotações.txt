@@ -1,6 +1,21 @@
+-= backend
+
+-= frontend
+
 /**
  * Babel: Converter (transpilar) código do React para um código que o browser entenda
  * Webpack: Para cada tipo de arquivo  (.js, .css, .pjng), eu vo converter o código de uma maneira diferente
  * 
  * Loaders: babel-loader, css-loader, image-loder, file-loader
  */
+
+/**
+ * Componente
+ * Propriedade
+ * Estado & Imutabilidade
+ */
+
+ // useState retorna um array com 2 posições.	
+ //
+ // 1. Variável com seu valor inicial.
+ // 2. FUnção para atualizarmos o valor.
