@@ -66,12 +66,14 @@ app.get('/projects', (request, response) => {
     ? projects.filter(project => project.title.includes(title))
     : projects;
 
+    console.log(results);
+
     return response.json(results);
 });
 
 app.post('/projects', (request, response) => {
     
-    const { title, owner} = request.body;
+    const { title, owner } = request.body;
 
     const project = { id: uuid(), title, owner };
 
@@ -86,8 +88,6 @@ app.put('/projects/:id', (request, response) => {
     const { title, owner } = request.body;
 
     const projectIndex = projects.findIndex(project => project.id === id);
-
-    console.log(projectIndex);
 
     if(projectIndex < 0){
         return response.status(400).json({ error: "Project not found."});
